@@ -1,5 +1,31 @@
-header{
+.greeting-h2>h2{
     font-size: 20px;
+    width: 250px;
+    height: 50px;
+    background-color: rgb(189, 197, 199);
+    border-radius:50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.mainpage-header{
+    position: fixed;
+    top: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(189, 197, 199);
+
+}
+.profile-picture{
+    position: absolute;
+    display: block;
+    top: 20px;
+    right: 20px;
+}
+.profile-picture>img{
+    border-radius:50px;
+    width: 80px;
+    height: 80px;
 }
 body{
     background-color: rgb(194, 205, 207);
