@@ -8,37 +8,8 @@
   --text-light: #6b7280;
   --extra-light: #faf5ff;
   --max-width: 1200px;
-  --pageHeight: 60em;
 }
 
-*{
-  margin: 0;
-}
-.firstslide{
-    width: 100%;
-    background-color: rgb(187, 169, 187);
-}
-.greeting{
-    background: transparent;
-    border: solid purple 0.5px;
-    width: 80%;
-    padding: 50px 30px 50px;
-    margin: 0 auto;
-}
-.greeting:hover{
-    border: solid rgb(88, 2, 88) 2px;
-    transition: all 0.1s ease 0s;
-
-}
-.greeting h1{
-    font-family: Andale Mono, monospace;
-    text-align: center;
-    font-size: 3em;
-}
-.greeting h2{
-    font-family: Andale Mono, monospace;
-    text-align: center;
-}
 * {
   padding: 0;
   margin: 0;
@@ -51,6 +22,70 @@ a {
 
 body {
   font-family: "Poppins", sans-serif;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .section {
@@ -140,7 +175,7 @@ body {
 
 .image img {
   width: min(25rem, 90%);
-  border-radius: 50%;
+  border-radius: 100%;
 }
 
 @media (width < 750px) {
@@ -181,14 +216,4 @@ body {
   .action__btns {
     margin: auto;
   }
-}
-.about-me {
-    width: 100%; 
-    float: none; 
-    margin-top: 0; 
-}
-
-
-@media only screen and (max-width: 600px){
-
 }
